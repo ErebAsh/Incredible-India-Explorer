@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        (function () {
+            const theme = localStorage.getItem("theme") || "dark";
+            if (theme === "light") {
+                document.documentElement.classList.add("light-theme");
+            }
+        })();
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kerala’s Rivers | Incredible India Explorer</title>
+    <meta name="description" content="State-wise explorer of Kerala’s major rivers: origins, districts, name meanings, tributaries, backwaters, agriculture, ecology, and an interactive map.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+        <nav class="topnav" aria-label="Primary">
+            <a class="brand" href="../../index.html">Incredible India Explorer</a>
+            <div class="nav-links">
+                <a href="#rivers">Rivers</a>
+                <a href="#agriculture">Agriculture</a>
+                <a href="#ecology">Ecology</a>
+                <a href="#map">Map</a>
+                <a href="#sources">Sources</a>
+            </div>
+            <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Switch to light theme">☀️</button>
+        </nav>
+    </header>
+
+    <main id="main">
+        <header class="hero">
+            <p class="eyebrow">Kerala · 44 rivers · west-flowing Ghats streams</p>
+            <h1>Kerala’s Rivers</h1>
+            <p class="hero-date">Periyar · Nila · Pamba · backwaters</p>
+            <p class="lede">Kerala’s short, steep rivers drop from the Western Ghats to the Arabian Sea and the Kerala backwaters. This page covers the major ones: origin, districts, name, tributaries, and how they join the lagoons.</p>
+        </header>
+
+        <section class="block" id="rivers" aria-labelledby="rivers-heading">
+            <div class="section-head">
+                <span class="tag">Major rivers</span>
+                <h2 id="rivers-heading">Origins, districts, names, tributaries</h2>
+            </div>
+            <p class="lede">Select a river card to place it on the map. Most Kerala rivers flow west; a few (Kabini, Bhavani, Pambar) leave the state east toward the Kaveri.</p>
+            <div class="river-grid">
+                <article class="card river-card" data-place="periyar" tabindex="0" role="button">
+                    <h3>Periyar</h3>
+                    <dl>
+                        <dt>Origin</dt>
+                        <dd>Sivagiri / Sundaramala hills, Western Ghats (Idukki)</dd>
+                        <dt>Districts</dt>
+                        <dd>Idukki, Ernakulam, Thrissur</dd>
+                        <dt>Name</dt>
+                        <dd><em>Periya aaru</em> — “big river”; Kerala’s longest (~244 km)</dd>
+                        <dt>Tributaries</dt>
+                        <dd>Mullayar, Muthirapuzha, Cheruthoni, Edamala, Perinjankutty, Idamalayar</dd>
+                        <dt>Backwaters</dt>
+                        <dd>Reaches the Kochi estuary and Vembanad through branches around Aluva–Varappuzha</dd>
+                    </dl>
+                </article>
+                <article class="card river-card" data-place="bharathapuzha" tabindex="0" role="button">
+                    <h3>Bharathapuzha (Nila)</h3>
+                    <dl>
+                        <dt>Origin</dt>
+                        <dd>Anaimalai Hills (enters Kerala at the Palakkad Gap)</dd>
+                        <dt>Districts</dt>
+                        <dd>Palakkad, Malappuram, Thrissur</dd>
+                        <dt>Name</dt>
+                        <dd>River of Bharata; also called Nila</dd>
+                        <dt>Tributaries</dt>
+                        <dd>Gayathripuzha, Kannadipuzha, Kalpathipuzha, Thuthapuzha</dd>
+                        <dt>Backwaters</dt>
+                        <dd>Meets the sea at the Ponnani estuary — not the Vembanad system</dd>
+                    </dl>
+                </article>
+                <article class="card river-card" data-place="pamba" tabindex="0" role="button">
+                    <h3>Pamba</h3>
+                    <dl>
+                        <dt>Origin</dt>
+                        <dd>Pulachimalai, Peerumade hills (Idukki)</dd>
+                        <dt>Districts</dt>
+                        <dd>Idukki, Pathanamthitta, Kottayam, Alappuzha</dd>
+                        <dt>Name</dt>
+                        <dd>Pampa; the pilgrimage river of Sabarimala</dd>
+                        <dt>Tributaries</dt>
+                        <dd>Kakki, Kakkad, Aruvippuzha, Kallar</dd>
+                        <dt>Backwaters</dt>
+                        <dd>Kuttanad and Vembanad (Punnamada); snake-boat waters</dd>
+                    </dl>
+                </article>
+                <article class="card river-card" data-place="chaliyar" tabindex="0" role="button">
+                    <h3>Chaliyar</h3>
+                    <dl>
+                        <dt>Origin</dt>
+                        <dd>Elambaleri hills, Wayanad</dd>
+                        <dt>Districts</dt>
+                        <dd>Wayanad, Malappuram, Kozhikode</dd>
+                        <dt>Name</dt>
+                        <dd>Also the Beypore River at its mouth</dd>
+                        <dt>Tributaries</dt>
+                        <dd>Chalipuzha, Punnapuzha, Karimpuzha, Iruvanjippuzha</dd>
+                        <dt>Backwaters</dt>
+                        <dd>Beypore estuary on the Kozhikode coast</dd>
+                    </dl>
+                </article>
+                <article class="card river-card" data-place="chalakudy" tabindex="0" role="button">
+                    <h3>Chalakudy</h3>
+                    <dl>
+                        <dt>Origin</dt>
+                        <dd>Anamalai / Parambikulam hills</dd>
+                        <dt>Districts</dt>
+                        <dd>Thrissur, Ernakulam</dd>
+                        <dt>Name</dt>
+                        <dd>Named for Chalakudy town</dd>
+                        <dt>Tributaries</dt>
+                        <dd>Sholayar, Parambikulam; joins the Periyar at Elanthikkara</dd>
+                        <dt>Backwaters</dt>
+                        <dd>Via the Periyar to the Kochi–Vembanad mouth</dd>
+                    </dl>
+                </article>
+                <article class="card river-card" data-place="achankovil" tabindex="0" role="button">
+                    <h3>Achankovil</h3>
+                    <dl>
+                        <dt>Origin</dt>
+                        <dd>Achankovil / Pasukida mettu, Western Ghats</dd>
+                        <dt>Districts</dt>
+                        <dd>Pathanamthitta, Kollam, Alappuzha</dd>
+                        <dt>Name</dt>
+                        <dd>From the Achenkovil settlement and shrine</dd>
+                        <dt>Tributaries</dt>
+                        <dd>Hill streams of the Achankovil valley</dd>
+                        <dt>Backwaters</dt>
+                        <dd>Joins the Pamba near Veeyapuram, then Vembanad</dd>
+                    </dl>
+                </article>
+                <article class="card river-card" data-place="kallada" tabindex="0" role="button">
+                    <h3>Kallada</h3>
+                    <dl>
+                        <dt>Origin</dt>
+                        <dd>Kulathupuzha hills, Western Ghats</dd>
+                        <dt>Districts</dt>
+                        <dd>Pathanamthitta, Kollam</dd>
+                        <dt>Name</dt>
+                        <dd>From the Kallada region of Kollam</dd>
+                        <dt>Tributaries</dt>
+                        <dd>Kulathupuzha, Chendurni</dd>
+                        <dt>Backwaters</dt>
+                        <dd>Feeds Ashtamudi Lake, a Ramsar backwater</dd>
+                    </dl>
+                </article>
+                <article class="card river-card" data-place="meenachil" tabindex="0" role="button">
+                    <h3>Meenachil</h3>
+                    <dl>
+                        <dt>Origin</dt>
+                        <dd>Vagamon / Western Ghats fringe</dd>
+                        <dt>Districts</dt>
+                        <dd>Idukki, Kottayam</dd>
+                        <dt>Name</dt>
+                        <dd>From Meenachil taluk (<em>meen</em>, fish, is the usual folk etymology)</dd>
+                        <dt>Tributaries</dt>
+                        <dd>Small highland streams of Meenachil taluk</dd>
+                        <dt>Backwaters</dt>
+                        <dd>Enters Vembanad at Kumarakom</dd>
+                    </dl>
+                </article>
+            </div>
+        </section>
+
+        <section class="block" id="agriculture" aria-labelledby="agriculture-heading">
+            <div class="section-head">
+                <span class="tag">Farming</span>
+                <h2 id="agriculture-heading">Agriculture</h2>
+            </div>
+            <p>River water and backwater tides run Kerala’s wet-rice belts. Kuttanad (Pamba, Achankovil, and related channels) grows paddy below mean sea level behind bunds. The Palakkad Gap along the Bharathapuzha is a rain-shadow rice bowl. Pokkali rice in the Ernakulam backwaters uses Periyar–Vembanad salinity. Coconut, areca, banana, and pepper line the banks; the Periyar Valley Irrigation Project waters Idukki–Ernakulam fields.</p>
+        </section>
+
+        <section class="block" id="ecology" aria-labelledby="ecology-heading">
+            <div class="section-head">
+                <span class="tag">Nature</span>
+                <h2 id="ecology-heading">Ecology</h2>
+            </div>
+            <p>Headwaters sit in Western Ghats forest (Periyar Tiger Reserve on the Periyar; Shendurney on the Kallada). The Vembanad–Kol and Ashtamudi wetlands are Ramsar sites: mangroves, migratory birds, and brackish fisheries. Endemic hill-stream fishes live in Ghats tributaries. Floods (notably 2018) show how tightly settlement sits on these short catchments.</p>
+        </section>
+
+        <section class="block" id="map" aria-labelledby="map-heading">
+            <div class="section-head">
+                <span class="tag">Geography</span>
+                <h2 id="map-heading">Interactive map</h2>
+            </div>
+            <p class="lede">Select a river to move the marker from Ghats origin to estuary or backwater.</p>
+            <div class="map-layout">
+                <div class="map-frame-wrap">
+                    <iframe
+                        id="river-map"
+                        title="Map of Kerala rivers"
+                        src="https://www.openstreetmap.org/export/embed.html?bbox=76.1,9.95,76.6,10.25&amp;layer=mapnik&amp;marker=10.1076,76.3516"
+                        loading="lazy"
+                    ></iframe>
+                </div>
+                <div>
+                    <div class="map-buttons" role="group" aria-label="River locations">
+                        <button type="button" class="map-btn is-active" data-place="periyar" aria-pressed="true">Periyar</button>
+                        <button type="button" class="map-btn" data-place="bharathapuzha">Bharathapuzha</button>
+                        <button type="button" class="map-btn" data-place="pamba">Pamba</button>
+                        <button type="button" class="map-btn" data-place="chaliyar">Chaliyar</button>
+                        <button type="button" class="map-btn" data-place="chalakudy">Chalakudy</button>
+                        <button type="button" class="map-btn" data-place="achankovil">Achankovil</button>
+                        <button type="button" class="map-btn" data-place="kallada">Kallada</button>
+                        <button type="button" class="map-btn" data-place="meenachil">Meenachil</button>
+                    </div>
+                    <div class="card map-info" id="map-info" aria-live="polite">
+                        <h3 id="map-info-title">Periyar</h3>
+                        <p id="map-info-desc">Marker at Aluva, Ernakulam, on the lower Periyar before it reaches the Kochi–Vembanad estuary.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="block sources" id="sources" aria-labelledby="sources-heading">
+            <div class="section-head">
+                <span class="tag">References</span>
+                <h2 id="sources-heading">Sources</h2>
+            </div>
+            <ol>
+                <li><a href="https://en.wikipedia.org/wiki/List_of_rivers_of_Kerala" target="_blank" rel="noopener noreferrer">Wikipedia — List of rivers of Kerala</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Periyar_(river)" target="_blank" rel="noopener noreferrer">Wikipedia — Periyar</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Bharathappuzha" target="_blank" rel="noopener noreferrer">Wikipedia — Bharathappuzha</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Pamba_River" target="_blank" rel="noopener noreferrer">Wikipedia — Pamba River</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Chaliyar" target="_blank" rel="noopener noreferrer">Wikipedia — Chaliyar</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Chalakudy_River" target="_blank" rel="noopener noreferrer">Wikipedia — Chalakudy River</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Vembanad" target="_blank" rel="noopener noreferrer">Wikipedia — Vembanad</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Ashtamudi_Lake" target="_blank" rel="noopener noreferrer">Wikipedia — Ashtamudi Lake</a></li>
+            </ol>
+        </section>
+    </main>
+
+    <footer class="page-footer">
+        <p>Incredible India Explorer · Kerala’s Rivers · <a href="../../index.html">Home</a></p>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

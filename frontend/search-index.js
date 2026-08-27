@@ -6673,12 +6673,19 @@ window.indiaSearchIndex = [
         url: "frontend/deccan-volcanic-landscape/index.html"
     },
 
-    // --- Rajasthan Rivers Explorer (#3948) ---
+    // --- Kerala Rivers Explorer (#3947) ---
     {
-        title: "Rajasthan's Rivers \u2014 Chambal, Luni & Seasonal Channels",
+        title: "Kerala's Rivers \u2014 Origins, Backwaters & Districts",
         category: "Rivers",
         description:
-            "Explore Rajasthan's rivers: Chambal, Banas, Luni, Mahi, Sabarmati, seasonal monsoon channels, origins, districts, name meanings, and an interactive map.",
-        url: "frontend/rajasthan-rivers-explorer/index.html"
+            "Explore Kerala's major rivers: origins, districts crossed, name meanings, tributaries, backwater connections, agriculture, ecology, and an interactive map.",
+        url: "frontend/kerala-rivers-explorer/index.html"},
+    // --- Rivers of Northeast India (#3946) ---
+    {
+        title: "Rivers of Northeast India \u2014 Brahmaputra & Barak",
+        category: "Rivers",
+        description:
+            "Explore the Brahmaputra, Barak, Subansiri, Lohit, Dibang, Manas and Dhansiri, with state-wise filtering, an interactive map, and ecological importance.",
+        url: "frontend/northeast-rivers-explorer/index.html"
     }
 ];

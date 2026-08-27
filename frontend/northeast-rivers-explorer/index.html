@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        (function () {
+            const theme = localStorage.getItem("theme") || "dark";
+            if (theme === "light") {
+                document.documentElement.classList.add("light-theme");
+            }
+        })();
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rivers of Northeast India | Incredible India Explorer</title>
+    <meta name="description" content="Explore Northeast India’s rivers: Brahmaputra, Barak, Subansiri, Lohit, Dibang, Manas and Dhansiri, with state-wise filtering, a map, and ecological importance.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+        <nav class="topnav" aria-label="Primary">
+            <a class="brand" href="../../index.html">Incredible India Explorer</a>
+            <div class="nav-links">
+                <a href="#rivers">Rivers</a>
+                <a href="#ecology">Ecology</a>
+                <a href="#map">Map</a>
+                <a href="#sources">Sources</a>
+            </div>
+            <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Switch to light theme">☀️</button>
+        </nav>
+    </header>
+
+    <main id="main">
+        <header class="hero">
+            <p class="eyebrow">Brahmaputra &amp; Barak basins</p>
+            <h1>Rivers of Northeast India</h1>
+            <p class="hero-date">Assam · Arunachal Pradesh · Manipur · Nagaland</p>
+            <p class="lede">Seven rivers shape the Northeast: the Brahmaputra and its Himalayan tributaries, and the separate Barak system of the south. Filter by state, then place each river on the map.</p>
+        </header>
+
+        <section class="block" id="rivers" aria-labelledby="rivers-heading">
+            <div class="section-head">
+                <span class="tag">Rivers</span>
+                <h2 id="rivers-heading">The seven rivers</h2>
+            </div>
+            <p class="lede">State-wise filtering shows which of these courses run through Assam, Arunachal Pradesh, Manipur, or Nagaland. Several rivers cross more than one state.</p>
+            <div class="filter-bar" role="group" aria-label="Filter rivers by state">
+                <button type="button" class="filter-btn is-active" data-state="all" aria-pressed="true">All states</button>
+                <button type="button" class="filter-btn" data-state="assam" aria-pressed="false">Assam</button>
+                <button type="button" class="filter-btn" data-state="arunachal" aria-pressed="false">Arunachal Pradesh</button>
+                <button type="button" class="filter-btn" data-state="manipur" aria-pressed="false">Manipur</button>
+                <button type="button" class="filter-btn" data-state="nagaland" aria-pressed="false">Nagaland</button>
+            </div>
+            <p class="filter-status" id="filter-status" aria-live="polite">Showing all 7 rivers.</p>
+            <div class="river-grid" id="river-grid">
+                <article class="card river-card" data-place="brahmaputra" data-states="assam arunachal">
+                    <h3>Brahmaputra</h3>
+                    <p class="state-tags">Assam · Arunachal Pradesh</p>
+                    <p>Enters India as the Siang (Dihang) in Arunachal Pradesh. After the Lohit and Dibang join near Sadiya, the combined river is the Brahmaputra. It braids west across Assam, then turns south at Dhubri into Bangladesh as the Jamuna.</p>
+                </article>
+                <article class="card river-card" data-place="barak" data-states="assam manipur">
+                    <h3>Barak</h3>
+                    <p class="state-tags">Manipur · Assam</p>
+                    <p>Rises in the Manipur hills and flows through Assam’s Barak Valley (Cachar, Karimganj, Hailakandi). It is a separate basin from the Brahmaputra; in Bangladesh it becomes the Surma–Meghna system.</p>
+                </article>
+                <article class="card river-card" data-place="subansiri" data-states="assam arunachal">
+                    <h3>Subansiri</h3>
+                    <p class="state-tags">Arunachal Pradesh · Assam</p>
+                    <p>Largest north-bank tributary of the Brahmaputra. Snow- and monsoon-fed from Arunachal, it meets the main stem west of Majuli. The 1950 Assam earthquake changed its channel pattern.</p>
+                </article>
+                <article class="card river-card" data-place="lohit" data-states="assam arunachal">
+                    <h3>Lohit</h3>
+                    <p class="state-tags">Arunachal Pradesh · Assam</p>
+                    <p>Flows from the Mishmi Hills through Tezu. With the Dibang, it joins the Siang at the head of the Assam Valley; below that confluence the river is called Brahmaputra.</p>
+                </article>
+                <article class="card river-card" data-place="dibang" data-states="assam arunachal">
+                    <h3>Dibang</h3>
+                    <p class="state-tags">Arunachal Pradesh · Assam</p>
+                    <p>Drains the Dibang Valley around Anini and Roing. It is one of the three mountain streams that create the Brahmaputra name at the valley head near Sadiya.</p>
+                </article>
+                <article class="card river-card" data-place="manas" data-states="assam">
+                    <h3>Manas</h3>
+                    <p class="state-tags">Assam</p>
+                    <p>Enters India from Bhutan and crosses Manas National Park before joining the Brahmaputra from the north (right bank). It is a transboundary Himalayan tributary of the Assam floodplain.</p>
+                </article>
+                <article class="card river-card" data-place="dhansiri" data-states="assam nagaland">
+                    <h3>Dhansiri</h3>
+                    <p class="state-tags">Nagaland · Assam</p>
+                    <p>The south-bank Dhansiri rises in the Naga Hills, flows through Golaghat, and meets the Brahmaputra at Dhansirimukh. (A smaller north-bank river of the same name also exists.)</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="block" id="ecology" aria-labelledby="ecology-heading">
+            <div class="section-head">
+                <span class="tag">Ecology</span>
+                <h2 id="ecology-heading">Ecological importance</h2>
+            </div>
+            <p>Seasonal floods and heavy Himalayan sediment keep Assam’s grasslands and wetlands open. Kaziranga’s one-horned rhinoceros, wild buffalo, and swamp deer depend on Brahmaputra pulse flooding. Manas National Park (UNESCO) sits on the Manas–Beki floodplain: tiger, elephant, golden langur, and pygmy hog. Dibru-Saikhowa and the Lohit–Brahmaputra chars hold grassland and riverine forest. The Brahmaputra still supports the Ganges river dolphin. Rice, fish, and tea cultures of the valley follow the same flood pulse. The Barak wetlands of southern Assam are a second, independent freshwater system for fisheries and migratory birds.</p>
+        </section>
+
+        <section class="block" id="map" aria-labelledby="map-heading">
+            <div class="section-head">
+                <span class="tag">Geography</span>
+                <h2 id="map-heading">Interactive map</h2>
+            </div>
+            <p class="lede">Select a river to move the marker. Buttons follow the same state filter as the list above.</p>
+            <div class="map-layout">
+                <div class="map-frame-wrap">
+                    <iframe
+                        id="river-map"
+                        title="Map of rivers of Northeast India"
+                        src="https://www.openstreetmap.org/export/embed.html?bbox=91.2,25.9,92.3,26.5&amp;layer=mapnik&amp;marker=26.18,91.75"
+                        loading="lazy"
+                    ></iframe>
+                </div>
+                <div>
+                    <div class="map-buttons" id="map-buttons" role="group" aria-label="River locations">
+                        <button type="button" class="map-btn is-active" data-place="brahmaputra" data-states="assam arunachal" aria-pressed="true">Brahmaputra</button>
+                        <button type="button" class="map-btn" data-place="barak" data-states="assam manipur">Barak</button>
+                        <button type="button" class="map-btn" data-place="subansiri" data-states="assam arunachal">Subansiri</button>
+                        <button type="button" class="map-btn" data-place="lohit" data-states="assam arunachal">Lohit</button>
+                        <button type="button" class="map-btn" data-place="dibang" data-states="assam arunachal">Dibang</button>
+                        <button type="button" class="map-btn" data-place="manas" data-states="assam">Manas</button>
+                        <button type="button" class="map-btn" data-place="dhansiri" data-states="assam nagaland">Dhansiri</button>
+                    </div>
+                    <div class="card map-info" id="map-info" aria-live="polite">
+                        <h3 id="map-info-title">Brahmaputra</h3>
+                        <p id="map-info-desc">Marker at Guwahati, Assam, on the braided main stem. The Siang enters from Arunachal; Lohit and Dibang join near Sadiya.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="block sources" id="sources" aria-labelledby="sources-heading">
+            <div class="section-head">
+                <span class="tag">References</span>
+                <h2 id="sources-heading">Sources</h2>
+            </div>
+            <ol>
+                <li><a href="https://en.wikipedia.org/wiki/Brahmaputra_River" target="_blank" rel="noopener noreferrer">Wikipedia — Brahmaputra River</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Barak_River" target="_blank" rel="noopener noreferrer">Wikipedia — Barak River</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Subansiri_River" target="_blank" rel="noopener noreferrer">Wikipedia — Subansiri River</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Lohit_River" target="_blank" rel="noopener noreferrer">Wikipedia — Lohit River</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Dibang_River" target="_blank" rel="noopener noreferrer">Wikipedia — Dibang River</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Manas_River" target="_blank" rel="noopener noreferrer">Wikipedia — Manas River</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Dhansiri" target="_blank" rel="noopener noreferrer">Wikipedia — Dhansiri</a></li>
+            </ol>
+        </section>
+    </main>
+
+    <footer class="page-footer">
+        <p>Incredible India Explorer · Rivers of Northeast India · <a href="../../index.html">Home</a></p>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

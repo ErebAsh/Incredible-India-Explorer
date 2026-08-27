@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        (function() {
+            const theme = localStorage.getItem('theme') || 'dark';
+            if (theme === 'light') {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        })();
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the Barak River — Lifeline of Southern Assam. Geography, tributaries, culture, ecology, and interactive map.">
+    <title>Barak River Explorer | Incredible India Explorer</title>
+    <link rel="preload" href="../../assets/fonts/Outfit-400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../assets/fonts/Outfit-700.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../assets/fonts/PlayfairDisplay-400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="bre-navbar">
+    <a href="../../index.html" class="back-link">&larr; Back to Home</a>
+    <div class="nav-brand">
+        <span class="saffron">Incredible</span>
+        <span class="gold">India</span>
+        <span class="green">Explorer</span>
+    </div>
+    <nav class="bre-nav-links">
+        <a href="#overview">Overview</a>
+        <a href="#course">Course</a>
+        <a href="#tributaries">Tributaries</a>
+        <a href="#culture">Culture</a>
+        <a href="#ecology">Ecology</a>
+        <a href="#map-section">Map</a>
+    </nav>
+</header>
+
+<!-- Hero -->
+<section class="bre-hero" id="breHero">
+    <div class="bre-hero-bg"><div class="bre-water-particles" id="waterParticles"></div></div>
+    <div class="bre-hero-overlay"></div>
+    <div class="bre-hero-content">
+        <span class="bre-section-badge">🌊 Northeast India</span>
+        <h1 class="bre-hero-title">The Barak River<br>Lifeline of Southern Assam</h1>
+        <p class="bre-hero-subtitle">
+            Flowing from the Manipur Hills through Assam and into Bangladesh, the Barak River nurtures millions
+            across Northeast India with its waters, fisheries, and fertile floodplains.
+        </p>
+        <div class="bre-hero-stats">
+            <div class="bre-stat-item"><span class="bre-stat-number">900+</span><span class="bre-stat-label">KM Long</span></div>
+            <div class="bre-stat-item"><span class="bre-stat-number">4</span><span class="bre-stat-label">States</span></div>
+            <div class="bre-stat-item"><span class="bre-stat-number">3</span><span class="bre-stat-label">Major Tributaries</span></div>
+            <div class="bre-stat-item"><span class="bre-stat-number">50M+</span><span class="bre-stat-label">People Served</span></div>
+        </div>
+        <a href="#overview" class="bre-cta-btn">Explore the Barak ↓</a>
+    </div>
+    <div class="bre-scroll-indicator"><div class="bre-scroll-mouse"><div class="bre-scroll-wheel"></div></div></div>
+</section>
+
+<!-- Overview -->
+<section class="bre-section" id="overview">
+    <div class="bre-container">
+        <div class="bre-section-header">
+            <span class="bre-section-badge">📖 Overview</span>
+            <h2>Introduction to the Barak River</h2>
+            <p class="bre-section-subtitle">One of the major rivers of Northeast India, the Barak is the lifeblood of southern Assam and the Cachar region.</p>
+        </div>
+        <div class="bre-info-grid" id="overviewGrid"></div>
+    </div>
+</section>
+
+<!-- River Course -->
+<section class="bre-section bre-dark-section" id="course">
+    <div class="bre-container">
+        <div class="bre-section-header">
+            <span class="bre-section-badge">🗺️ Complete Course</span>
+            <h2>Journey of the Barak River</h2>
+            <p class="bre-section-subtitle">From its source in the Manipur Hills to where it enters Bangladesh, the Barak traverses diverse terrains.</p>
+        </div>
+        <div class="bre-course-timeline" id="courseTimeline"></div>
+    </div>
+</section>
+
+<!-- Tributaries -->
+<section class="bre-section" id="tributaries">
+    <div class="bre-container">
+        <div class="bre-section-header">
+            <span class="bre-section-badge">🌊 Major Tributaries</span>
+            <h2>Rivers That Feed the Barak</h2>
+            <p class="bre-section-subtitle">The Barak is joined by several important tributaries that drain the hills of Nagaland, Manipur, and Mizoram.</p>
+        </div>
+        <div class="bre-grid-3" id="tributaryGrid"></div>
+    </div>
+</section>
+
+<!-- Culture & Cities -->
+<section class="bre-section bre-dark-section" id="culture">
+    <div class="bre-container">
+        <div class="bre-section-header">
+            <span class="bre-section-badge">🏛️ Culture & Settlements</span>
+            <h2>Cities and Cultural Heritage</h2>
+            <p class="bre-section-subtitle">The Barak Valley is home to diverse communities including Bengali, Manipuri, Assamese, and tribal peoples.</p>
+        </div>
+        <div class="bre-grid-3" id="cultureGrid"></div>
+    </div>
+</section>
+
+<!-- Ecology & Agriculture -->
+<section class="bre-section" id="ecology">
+    <div class="bre-container">
+        <div class="bre-section-header">
+            <span class="bre-section-badge">🌿 Ecology & Agriculture</span>
+            <h2>Ecological Importance</h2>
+            <p class="bre-section-subtitle">The Barak's floodplains support rich biodiversity, fisheries, and agricultural livelihoods.</p>
+        </div>
+        <div class="bre-grid-3" id="ecologyGrid"></div>
+    </div>
+</section>
+
+<!-- Interactive Map -->
+<section class="bre-section bre-dark-section" id="map-section">
+    <div class="bre-container">
+        <div class="bre-section-header">
+            <span class="bre-section-badge">🗺️ Interactive Map</span>
+            <h2>Barak River Route Map</h2>
+            <p class="bre-section-subtitle">Click on markers to explore locations along the river.</p>
+        </div>
+        <div class="bre-map-wrapper">
+            <div class="bre-map-container">
+                <svg viewBox="0 0 600 500" xmlns="http://www.w3.org/2000/svg" id="breMapSvg">
+                    <!-- Simplified NE India outline -->
+                    <path d="M350,30 L400,40 L450,60 L480,90 L500,130 L510,170 L500,210 L480,250 L450,280 L420,300 L380,320 L340,330 L300,340 L260,330 L230,310 L210,280 L200,250 L190,220 L180,190 L170,160 L165,130 L170,100 L185,70 L210,50 L240,35 L280,28 L310,25 Z" fill="none" stroke="var(--bre-border)" stroke-width="1.5" opacity="0.5"/>
+                    <!-- Barak River path -->
+                    <path d="M220,160 C240,170 260,180 280,195 C300,210 320,225 340,240 C360,255 380,260 400,270 C420,280 440,290 460,300" fill="none" stroke="#3b82f6" stroke-width="3" stroke-linecap="round" class="bre-river-path"/>
+                    <!-- Markers -->
+                    <g id="breMapMarkers"></g>
+                </svg>
+                <div class="bre-map-legend">
+                    <h4>Legend</h4>
+                    <div class="bre-legend-item"><span class="bre-legend-dot" style="background:#3b82f6"></span> Barak River</div>
+                    <div class="bre-legend-item"><span class="bre-legend-dot" style="background:#f59e0b"></span> Major City</div>
+                    <div class="bre-legend-item"><span class="bre-legend-dot" style="background:#10b981"></span> Source/Origin</div>
+                </div>
+            </div>
+            <div class="bre-map-info-panel">
+                <div class="bre-map-info-default" id="breInfoDefault">
+                    <div class="bre-map-info-icon">🌊</div>
+                    <h3>Explore the Barak</h3>
+                    <p>Click on a map marker to see details about that location along the river.</p>
+                </div>
+                <div class="bre-map-info-content" id="breInfoContent" style="display:none;">
+                    <button class="bre-info-close" id="breInfoClose">&times;</button>
+                    <div class="bre-info-icon" id="breInfoIcon">📍</div>
+                    <span class="bre-info-tag" id="breInfoTag">Location</span>
+                    <h3 id="breInfoName">Name</h3>
+                    <p class="bre-info-desc" id="breInfoDesc"></p>
+                    <div class="bre-info-section"><h4>📍 Details</h4><p id="breInfoDetails"></p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sources -->
+<section class="bre-section" id="sources">
+    <div class="bre-container">
+        <div class="bre-section-header">
+            <span class="bre-section-badge">📚 References</span>
+            <h2>Sources & Further Reading</h2>
+        </div>
+        <div class="bre-grid-3" id="sourcesGrid"></div>
+    </div>
+</section>
+
+<footer class="bre-footer">
+    <div class="bre-footer-content">
+        <div class="bre-footer-brand"><span class="saffron">Incredible</span> <span class="gold">India</span> <span class="green">Explorer</span></div>
+        <p class="bre-footer-text">Explore the Barak River — the lifeline of Southern Assam and Northeast India.</p>
+        <p class="bre-footer-copy">&copy; 2026 Incredible India Explorer. Barak River Explorer.</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
