@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        (function () {
+            const theme = localStorage.getItem("theme") || "dark";
+            if (theme === "light") {
+                document.documentElement.classList.add("light-theme");
+            }
+        })();
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rajasthan’s Rivers | Incredible India Explorer</title>
+    <meta name="description" content="State-wise explorer of Rajasthan’s rivers: Chambal, Banas, Luni, Mahi, Sabarmati, seasonal channels, origins, districts, name meanings, and an interactive map.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+        <nav class="topnav" aria-label="Primary">
+            <a class="brand" href="../../index.html">Incredible India Explorer</a>
+            <div class="nav-links">
+                <a href="#rivers">Rivers</a>
+                <a href="#seasonal">Seasonal</a>
+                <a href="#map">Map</a>
+                <a href="#sources">Sources</a>
+            </div>
+            <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Switch to light theme">☀️</button>
+        </nav>
+    </header>
+
+    <main id="main">
+        <header class="hero">
+            <p class="eyebrow">Rajasthan · Aravalli divide · inland &amp; Bay of Bengal drainages</p>
+            <h1>Rajasthan’s Rivers</h1>
+            <p class="hero-date">Chambal · Banas · Luni · Mahi · Sabarmati</p>
+            <p class="lede">East of the Aravallis, rivers such as the Chambal reach the Yamuna. West of the hills, the Luni and many monsoon channels fade into salt pans or the Rann. Select a river card to place it on the map.</p>
+        </header>
+
+        <section class="block" id="rivers" aria-labelledby="rivers-heading">
+            <div class="section-head">
+                <span class="tag">Named rivers</span>
+                <h2 id="rivers-heading">Origins, districts, names</h2>
+            </div>
+            <div class="river-grid">
+                <article class="card river-card" data-place="chambal" tabindex="0" role="button">
+                    <h3>Chambal</h3>
+                    <dl>
+                        <dt>Origin</dt>
+                        <dd>Janapav hills near Mhow (Madhya Pradesh); enters Rajasthan as a Yamuna tributary</dd>
+                        <dt>Districts</dt>
+                        <dd>Kota, Bundi, Sawai Madhopur, Karauli, Dholpur</dd>
+                        <dt>Name</dt>
+                        <dd>From the ancient <em>Charmanvati</em> (“river of hides”)</dd>
+                    </dl>
+                </article>
+                <article class="card river-card" data-place="banas" tabindex="0" role="button">
+                    <h3>Banas</h3>
+                    <dl>
+                        <dt>Origin</dt>
+                        <dd>Khamnor hills of the Aravalli, near Kumbhalgarh (Rajsamand)</dd>
+                        <dt>Districts</dt>
+                        <dd>Rajsamand, Chittorgarh, Bhilwara, Tonk, Sawai Madhopur</dd>
+                        <dt>Name</dt>
+                        <dd>Often explained as <em>van ki asha</em> — “hope of the forest”</dd>
+                    </dl>
+                </article>
+                <article class="card river-card" data-place="luni" tabindex="0" role="button">
+                    <h3>Luni</h3>
+                    <dl>
+                        <dt>Origin</dt>
+                        <dd>Nag Pahar / Pushkar valley, Ajmer (western Aravalli slope)</dd>
+                        <dt>Districts</dt>
+                        <dd>Ajmer, Nagaur, Pali, Jodhpur, Barmer, Jalore</dd>
+                        <dt>Name</dt>
+                        <dd>From <em>Lavanavari</em> — “salt river”; water turns saline downstream</dd>
+                    </dl>
+                </article>
+                <article class="card river-card" data-place="mahi" tabindex="0" role="button">
+                    <h3>Mahi</h3>
+                    <dl>
+                        <dt>Origin</dt>
+                        <dd>Vindhya hills (Madhya Pradesh); crosses southern Rajasthan toward the Gulf of Khambhat</dd>
+                        <dt>Districts</dt>
+                        <dd>Banswara, Dungarpur</dd>
+                        <dt>Name</dt>
+                        <dd>The Mahi of Mahi Kantha; also called Mahisagar in parts of its course</dd>
+                    </dl>
+                </article>
+                <article class="card river-card" data-place="sabarmati" tabindex="0" role="button">
+                    <h3>Sabarmati</h3>
+                    <dl>
+                        <dt>Origin</dt>
+                        <dd>Aravalli Range, Udaipur district; then flows through Gujarat to the Gulf of Khambhat</dd>
+                        <dt>Districts</dt>
+                        <dd>Udaipur (Rajasthan headwaters)</dd>
+                        <dt>Name</dt>
+                        <dd>From the older <em>Svabhravati</em> / Sabarmati of the Gujarat plain</dd>
+                    </dl>
+                </article>
+            </div>
+        </section>
+
+        <section class="block" id="seasonal" aria-labelledby="seasonal-heading">
+            <div class="section-head">
+                <span class="tag">Monsoon channels</span>
+                <h2 id="seasonal-heading">Seasonal rivers</h2>
+            </div>
+            <p>Most of Rajasthan’s drainage is monsoon-fed. The Chambal is the state’s most reliable perennial river. The Banas, Luni, Mahi, and Sabarmati swell in the southwest monsoon and shrink or go dry in the hot months, especially on sandy western plains.</p>
+            <p>West of the Aravallis, inland drainage dominates: the Luni ends in the Rann of Kutch rather than a delta, and tributaries such as the Jojari, Sukri, and Bandi run only after rain. In the north, the Ghaggar is a seasonal channel through Hanumangarh and Sri Ganganagar. Banganga and other eastern streams likewise depend on a few wet weeks. Tanks, khadins, and canal water matter because the natural rivers do not flow year-round.</p>
+        </section>
+
+        <section class="block" id="map" aria-labelledby="map-heading">
+            <div class="section-head">
+                <span class="tag">Geography</span>
+                <h2 id="map-heading">Interactive map</h2>
+            </div>
+            <p class="lede">Select a river to move the marker across Rajasthan’s eastern perennial belt and western salt-river country.</p>
+            <div class="map-layout">
+                <div class="map-frame-wrap">
+                    <iframe
+                        id="river-map"
+                        title="Map of Rajasthan rivers"
+                        src="https://www.openstreetmap.org/export/embed.html?bbox=75.5,24.95,76.2,25.45&amp;layer=mapnik&amp;marker=25.2138,75.8648"
+                        loading="lazy"
+                    ></iframe>
+                </div>
+                <div>
+                    <div class="map-buttons" role="group" aria-label="River locations">
+                        <button type="button" class="map-btn is-active" data-place="chambal" aria-pressed="true">Chambal</button>
+                        <button type="button" class="map-btn" data-place="banas">Banas</button>
+                        <button type="button" class="map-btn" data-place="luni">Luni</button>
+                        <button type="button" class="map-btn" data-place="mahi">Mahi</button>
+                        <button type="button" class="map-btn" data-place="sabarmati">Sabarmati</button>
+                    </div>
+                    <div class="card map-info" id="map-info" aria-live="polite">
+                        <h3 id="map-info-title">Chambal</h3>
+                        <p id="map-info-desc">Marker at Kota, on the Chambal as it cuts the eastern plateau toward the Yamuna.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="block sources" id="sources" aria-labelledby="sources-heading">
+            <div class="section-head">
+                <span class="tag">References</span>
+                <h2 id="sources-heading">Sources</h2>
+            </div>
+            <ol>
+                <li><a href="https://en.wikipedia.org/wiki/Chambal_River" target="_blank" rel="noopener noreferrer">Wikipedia — Chambal River</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Banas_River" target="_blank" rel="noopener noreferrer">Wikipedia — Banas River</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Luni_River" target="_blank" rel="noopener noreferrer">Wikipedia — Luni River</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Mahi_River" target="_blank" rel="noopener noreferrer">Wikipedia — Mahi River</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Sabarmati_River" target="_blank" rel="noopener noreferrer">Wikipedia — Sabarmati River</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Ghaggar-Hakra_River" target="_blank" rel="noopener noreferrer">Wikipedia — Ghaggar-Hakra River</a></li>
+            </ol>
+        </section>
+    </main>
+
+    <footer class="page-footer">
+        <p>Incredible India Explorer · Rajasthan’s Rivers · <a href="../../index.html">Home</a></p>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

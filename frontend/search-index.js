@@ -6671,5 +6671,14 @@ window.indiaSearchIndex = [
         description:
             "Explore the Deccan Traps: flood-basalt history, Western Ghats stratigraphy, a ~66 Ma timeline, intertrappean fossils, trap landscape, and an interactive site map.",
         url: "frontend/deccan-volcanic-landscape/index.html"
+    },
+
+    // --- Rajasthan Rivers Explorer (#3948) ---
+    {
+        title: "Rajasthan's Rivers \u2014 Chambal, Luni & Seasonal Channels",
+        category: "Rivers",
+        description:
+            "Explore Rajasthan's rivers: Chambal, Banas, Luni, Mahi, Sabarmati, seasonal monsoon channels, origins, districts, name meanings, and an interactive map.",
+        url: "frontend/rajasthan-rivers-explorer/index.html"
     }
 ];
