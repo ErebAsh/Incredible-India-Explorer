@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        (function() {
+            const theme = localStorage.getItem('theme') || 'dark';
+            if (theme === 'light') {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        })();
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the Manas River — River of the Himalayan Foothills. Origin, tributaries, Manas National Park, and ecology.">
+    <title>Manas River Explorer | Incredible India Explorer</title>
+    <link rel="preload" href="../../assets/fonts/Outfit-400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../assets/fonts/Outfit-700.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../assets/fonts/PlayfairDisplay-400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="mre-navbar">
+    <a href="../../index.html" class="back-link">&larr; Back to Home</a>
+    <div class="nav-brand"><span class="saffron">Incredible</span> <span class="gold">India</span> <span class="green">Explorer</span></div>
+    <nav class="mre-nav-links">
+        <a href="#overview">Overview</a>
+        <a href="#course">Course</a>
+        <a href="#tributaries">Tributaries</a>
+        <a href="#wildlife">Wildlife</a>
+        <a href="#culture">Culture</a>
+        <a href="#map-section">Map</a>
+    </nav>
+</header>
+
+<!-- Hero -->
+<section class="mre-hero" id="mreHero">
+    <div class="mre-hero-bg"><div class="mre-particles" id="mreParticles"></div></div>
+    <div class="mre-hero-overlay"></div>
+    <div class="mre-hero-content">
+        <span class="mre-section-badge">🏔️ Himalayan River</span>
+        <h1 class="mre-hero-title">The Manas River<br>River of the Himalayan Foothills</h1>
+        <p class="mre-hero-subtitle">
+            Born in the shadow of Mount Kailash and flowing through Bhutan's pristine forests into Assam's plains,
+            the Manas River is a lifeline for wildlife and communities alike.
+        </p>
+        <div class="mre-hero-stats">
+            <div class="mre-stat-item"><span class="mre-stat-number">376</span><span class="mre-stat-label">KM Long</span></div>
+            <div class="mre-stat-item"><span class="mre-stat-number">2</span><span class="mre-stat-label">Countries</span></div>
+            <div class="mre-stat-item"><span class="mre-stat-number">UNESCO</span><span class="mre-stat-label">World Heritage</span></div>
+            <div class="mre-stat-item"><span class="mre-stat-number">50+</span><span class="mre-stat-label">Tiger Reserve</span></div>
+        </div>
+        <a href="#overview" class="mre-cta-btn">Explore the Manas ↓</a>
+    </div>
+    <div class="mre-scroll-indicator"><div class="mre-scroll-mouse"><div class="mre-scroll-wheel"></div></div></div>
+</section>
+
+<!-- Overview -->
+<section class="mre-section" id="overview">
+    <div class="mre-container">
+        <div class="mre-section-header">
+            <span class="mre-section-badge">📖 Overview</span>
+            <h2>Introduction to the Manas River</h2>
+            <p class="mre-section-subtitle">A trans-boundary river flowing from the Tibetan Plateau through Bhutan into Assam's golden grasslands.</p>
+        </div>
+        <div class="mre-info-grid" id="overviewGrid"></div>
+    </div>
+</section>
+
+<!-- Course -->
+<section class="mre-section mre-dark-section" id="course">
+    <div class="mre-container">
+        <div class="mre-section-header">
+            <span class="mre-section-badge">🗺️ River Course</span>
+            <h2>Journey of the Manas River</h2>
+            <p class="mre-section-subtitle">From glacial springs in Bhutan to the Brahmaputra confluence in Assam.</p>
+        </div>
+        <div class="mre-course-timeline" id="courseTimeline"></div>
+    </div>
+</section>
+
+<!-- Tributaries -->
+<section class="mre-section" id="tributaries">
+    <div class="mre-container">
+        <div class="mre-section-header">
+            <span class="mre-section-badge">🌊 Tributaries</span>
+            <h2>Rivers Feeding the Manas</h2>
+            <p class="mre-section-subtitle">Major and minor tributaries that drain the Bhutan Himalayas and Assam foothills.</p>
+        </div>
+        <div class="mre-grid-3" id="tributaryGrid"></div>
+    </div>
+</section>
+
+<!-- Wildlife & National Park -->
+<section class="mre-section mre-dark-section" id="wildlife">
+    <div class="mre-container">
+        <div class="mre-section-header">
+            <span class="mre-section-badge">🐅 Manas National Park</span>
+            <h2>Wildlife & Ecological Importance</h2>
+            <p class="mre-section-subtitle">Home to the UNESCO World Heritage Manas National Park and Tiger Reserve.</p>
+        </div>
+        <div class="mre-grid-3" id="wildlifeGrid"></div>
+    </div>
+</section>
+
+<!-- Culture & Communities -->
+<section class="mre-section" id="culture">
+    <div class="mre-container">
+        <div class="mre-section-header">
+            <span class="mre-section-badge">🏛️ Communities</span>
+            <h2>People & Culture Along the Manas</h2>
+            <p class="mre-section-subtitle">Diverse communities — Bodo, Assamese, Adivasi — depend on the Manas for their livelihoods.</p>
+        </div>
+        <div class="mre-grid-3" id="cultureGrid"></div>
+    </div>
+</section>
+
+<!-- Map -->
+<section class="mre-section mre-dark-section" id="map-section">
+    <div class="mre-container">
+        <div class="mre-section-header">
+            <span class="mre-section-badge">🗺️ Interactive Map</span>
+            <h2>Manas River Route</h2>
+            <p class="mre-section-subtitle">Click markers to explore locations along the river.</p>
+        </div>
+        <div class="mre-map-wrapper">
+            <div class="mre-map-container">
+                <svg viewBox="0 0 600 500" xmlns="http://www.w3.org/2000/svg" id="mreMapSvg">
+                    <path d="M300,20 L350,40 L400,60 L440,100 L460,150 L450,200 L420,250 L380,290 L340,320 L300,340 L260,330 L220,300 L200,260 L190,220 L200,180 L220,140 L250,100 L280,60 Z" fill="none" stroke="var(--mre-border)" stroke-width="1.5" opacity="0.5"/>
+                    <path d="M350,40 C340,60 330,80 320,100 C310,120 300,140 290,160 C280,180 270,200 260,220 C250,240 240,260 230,280" fill="none" stroke="#3b82f6" stroke-width="3" stroke-linecap="round" class="mre-river-path"/>
+                    <g id="mreMapMarkers"></g>
+                </svg>
+                <div class="mre-map-legend">
+                    <h4>Legend</h4>
+                    <div class="mre-legend-item"><span class="mre-legend-dot" style="background:#3b82f6"></span> Manas River</div>
+                    <div class="mre-legend-item"><span class="mre-legend-dot" style="background:#10b981"></span> Origin</div>
+                    <div class="mre-legend-item"><span class="mre-legend-dot" style="background:#f59e0b"></span> National Park</div>
+                    <div class="mre-legend-item"><span class="mre-legend-dot" style="background:#8b5cf6"></span> Confluence</div>
+                </div>
+            </div>
+            <div class="mre-map-info-panel">
+                <div class="mre-map-info-default" id="mreInfoDefault">
+                    <div class="mre-map-info-icon">🏔️</div>
+                    <h3>Explore the Manas</h3>
+                    <p>Click a map marker to see details about that location.</p>
+                </div>
+                <div class="mre-map-info-content" id="mreInfoContent" style="display:none;">
+                    <button class="mre-info-close" id="mreInfoClose">&times;</button>
+                    <div class="mre-info-icon" id="mreInfoIcon">📍</div>
+                    <span class="mre-info-tag" id="mreInfoTag">Location</span>
+                    <h3 id="mreInfoName">Name</h3>
+                    <p class="mre-info-desc" id="mreInfoDesc"></p>
+                    <div class="mre-info-section"><h4>📍 Details</h4><p id="mreInfoDetails"></p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sources -->
+<section class="mre-section" id="sources">
+    <div class="mre-container">
+        <div class="mre-section-header">
+            <span class="mre-section-badge">📚 References</span>
+            <h2>Sources & Further Reading</h2>
+        </div>
+        <div class="mre-grid-3" id="sourcesGrid"></div>
+    </div>
+</section>
+
+<footer class="mre-footer">
+    <div class="mre-footer-content">
+        <div class="mre-footer-brand"><span class="saffron">Incredible</span> <span class="gold">India</span> <span class="green">Explorer</span></div>
+        <p class="mre-footer-text">Explore the Manas River — river of the Himalayan foothills.</p>
+        <p class="mre-footer-copy">&copy; 2026 Incredible India Explorer. Manas River Explorer.</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
