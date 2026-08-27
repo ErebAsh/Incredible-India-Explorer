@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        (function () {
+            const theme = localStorage.getItem("theme") || "dark";
+            if (theme === "light") {
+                document.documentElement.classList.add("light-theme");
+            }
+        })();
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maharashtra’s Rivers | Incredible India Explorer</title>
+    <meta name="description" content="State-wise explorer of Maharashtra’s rivers: Godavari, Krishna, Bhima, Tapi, Wardha, Wainganga, major tributaries, cities, agriculture, and an interactive map.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+        <nav class="topnav" aria-label="Primary">
+            <a class="brand" href="../../index.html">Incredible India Explorer</a>
+            <div class="nav-links">
+                <a href="#rivers">Rivers</a>
+                <a href="#agriculture">Agriculture</a>
+                <a href="#map">Map</a>
+                <a href="#sources">Sources</a>
+            </div>
+            <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Switch to light theme">☀️</button>
+        </nav>
+    </header>
+
+    <main id="main">
+        <header class="hero">
+            <p class="eyebrow">Maharashtra · Godavari, Krishna &amp; Tapi basins</p>
+            <h1>Maharashtra’s Rivers</h1>
+            <p class="hero-date">Western Ghats origins · Deccan plateau · Vidarbha</p>
+            <p class="lede">Most large rivers of Maharashtra rise on the Western Ghats and flow east across the Deccan to the Bay of Bengal. The Tapi is the main west-flowing exception. Select a river card to place it on the map.</p>
+        </header>
+
+        <section class="block" id="rivers" aria-labelledby="rivers-heading">
+            <div class="section-head">
+                <span class="tag">Named rivers</span>
+                <h2 id="rivers-heading">Courses, tributaries, cities</h2>
+            </div>
+            <div class="river-grid">
+                <article class="card river-card" data-place="godavari" tabindex="0" role="button">
+                    <h3>Godavari</h3>
+                    <dl>
+                        <dt>Course</dt>
+                        <dd>Rises at Trimbakeshwar (Nashik) and crosses Marathwada before leaving for Telangana</dd>
+                        <dt>Major tributaries</dt>
+                        <dd>Pravara, Purna, Darna, Kadva, Sindphana; the Pranhita (Wardha–Wainganga) joins downstream of Maharashtra</dd>
+                        <dt>Cities</dt>
+                        <dd>Nashik, Paithan, Nanded</dd>
+                    </dl>
+                </article>
+                <article class="card river-card" data-place="krishna" tabindex="0" role="button">
+                    <h3>Krishna</h3>
+                    <dl>
+                        <dt>Course</dt>
+                        <dd>Rises at Mahabaleshwar (Satara) and flows through western Maharashtra into Karnataka</dd>
+                        <dt>Major tributaries</dt>
+                        <dd>Koyna, Yerla, Warna, Panchganga; the Bhima joins the Krishna in Karnataka</dd>
+                        <dt>Cities</dt>
+                        <dd>Wai, Karad, Sangli</dd>
+                    </dl>
+                </article>
+                <article class="card river-card" data-place="bhima" tabindex="0" role="button">
+                    <h3>Bhima</h3>
+                    <dl>
+                        <dt>Course</dt>
+                        <dd>Rises at Bhimashankar (Pune district) and runs the rain-shadow plateau toward Solapur</dd>
+                        <dt>Major tributaries</dt>
+                        <dd>Mula, Mutha, Indrayani, Ghod, Nira, Sina</dd>
+                        <dt>Cities</dt>
+                        <dd>Pune, Pandharpur, Solapur</dd>
+                    </dl>
+                </article>
+                <article class="card river-card" data-place="tapi" tabindex="0" role="button">
+                    <h3>Tapi (Tapti)</h3>
+                    <dl>
+                        <dt>Course</dt>
+                        <dd>Rises at Multai (Madhya Pradesh) and crosses Khandesh west to Gujarat and the Arabian Sea</dd>
+                        <dt>Major tributaries</dt>
+                        <dd>Purna, Girna, Panjhra, Waghur, Bori, Aner</dd>
+                        <dt>Cities</dt>
+                        <dd>Bhusawal, Jalgaon (Khandesh towns on or near the Tapi–Girna system)</dd>
+                    </dl>
+                </article>
+                <article class="card river-card" data-place="wardha" tabindex="0" role="button">
+                    <h3>Wardha</h3>
+                    <dl>
+                        <dt>Course</dt>
+                        <dd>Rises in the Satpura near Multai and drains western Vidarbha; meets the Wainganga to form the Pranhita</dd>
+                        <dt>Major tributaries</dt>
+                        <dd>Penganga, Wena</dd>
+                        <dt>Cities</dt>
+                        <dd>Wardha, Chandrapur (lower course)</dd>
+                    </dl>
+                </article>
+                <article class="card river-card" data-place="wainganga" tabindex="0" role="button">
+                    <h3>Wainganga</h3>
+                    <dl>
+                        <dt>Course</dt>
+                        <dd>Rises in the Mahadeo Hills (Madhya Pradesh) and flows through eastern Vidarbha</dd>
+                        <dt>Major tributaries</dt>
+                        <dd>Kanhan, Pench, Bagh, Andhari</dd>
+                        <dt>Cities</dt>
+                        <dd>Gondia, Bhandara, Chandrapur</dd>
+                    </dl>
+                </article>
+            </div>
+        </section>
+
+        <section class="block" id="agriculture" aria-labelledby="agriculture-heading">
+            <div class="section-head">
+                <span class="tag">Farming</span>
+                <h2 id="agriculture-heading">Agriculture</h2>
+            </div>
+            <p>Canal and well irrigation on the Godavari, Krishna, and Bhima support the western Maharashtra sugarcane belt (Nashik–Ahmednagar–Pune–Sangli). Jayakwadi on the Godavari at Paithan is a major storage. The Bhima–Nira country is also drought-prone when the monsoon is weak. Khandesh along the Tapi and Girna grows cotton and banana. Vidarbha’s Wardha–Wainganga basin is cotton on the west and paddy in the wetter east (Gondia–Bhandara).</p>
+        </section>
+
+        <section class="block" id="map" aria-labelledby="map-heading">
+            <div class="section-head">
+                <span class="tag">Geography</span>
+                <h2 id="map-heading">Interactive map</h2>
+            </div>
+            <p class="lede">Select a river to move the marker between Ghats origins, plateau cities, and Vidarbha.</p>
+            <div class="map-layout">
+                <div class="map-frame-wrap">
+                    <iframe
+                        id="river-map"
+                        title="Map of Maharashtra rivers"
+                        src="https://www.openstreetmap.org/export/embed.html?bbox=73.5,19.8,74.1,20.15&amp;layer=mapnik&amp;marker=19.9975,73.7898"
+                        loading="lazy"
+                    ></iframe>
+                </div>
+                <div>
+                    <div class="map-buttons" role="group" aria-label="River locations">
+                        <button type="button" class="map-btn is-active" data-place="godavari" aria-pressed="true">Godavari</button>
+                        <button type="button" class="map-btn" data-place="krishna">Krishna</button>
+                        <button type="button" class="map-btn" data-place="bhima">Bhima</button>
+                        <button type="button" class="map-btn" data-place="tapi">Tapi</button>
+                        <button type="button" class="map-btn" data-place="wardha">Wardha</button>
+                        <button type="button" class="map-btn" data-place="wainganga">Wainganga</button>
+                    </div>
+                    <div class="card map-info" id="map-info" aria-live="polite">
+                        <h3 id="map-info-title">Godavari</h3>
+                        <p id="map-info-desc">Marker at Nashik, near the Trimbakeshwar source of the Godavari.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="block sources" id="sources" aria-labelledby="sources-heading">
+            <div class="section-head">
+                <span class="tag">References</span>
+                <h2 id="sources-heading">Sources</h2>
+            </div>
+            <ol>
+                <li><a href="https://en.wikipedia.org/wiki/Godavari_River" target="_blank" rel="noopener noreferrer">Wikipedia — Godavari River</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Krishna_River" target="_blank" rel="noopener noreferrer">Wikipedia — Krishna River</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Bhima_River" target="_blank" rel="noopener noreferrer">Wikipedia — Bhima River</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Tapti_River" target="_blank" rel="noopener noreferrer">Wikipedia — Tapti River</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Wardha_River" target="_blank" rel="noopener noreferrer">Wikipedia — Wardha River</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Wainganga_River" target="_blank" rel="noopener noreferrer">Wikipedia — Wainganga River</a></li>
+            </ol>
+        </section>
+    </main>
+
+    <footer class="page-footer">
+        <p>Incredible India Explorer · Maharashtra’s Rivers · <a href="../../index.html">Home</a></p>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

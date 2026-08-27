@@ -6687,5 +6687,14 @@ window.indiaSearchIndex = [
         description:
             "Explore the Brahmaputra, Barak, Subansiri, Lohit, Dibang, Manas and Dhansiri, with state-wise filtering, an interactive map, and ecological importance.",
         url: "frontend/northeast-rivers-explorer/index.html"
+    },
+
+    // --- Maharashtra Rivers Explorer (#3949) ---
+    {
+        title: "Maharashtra's Rivers \u2014 Godavari, Krishna & Tapi",
+        category: "Rivers",
+        description:
+            "Explore Maharashtra's rivers: Godavari, Krishna, Bhima, Tapi, Wardha, Wainganga, major tributaries, cities, agriculture, and an interactive map.",
+        url: "frontend/maharashtra-rivers-explorer/index.html"
     }
 ];
